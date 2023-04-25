@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _unsigned - a function for printing integers
+ * _unsigned - a function for printing integers.
  * @args: the arguments
-*Return: printed characters
+*Return: printed characters.
 */
 int _unsigned(va_list args)
 {

@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _oct - a function for printing octal numbers
- * @val: the arguments.
+ * _oct - a function for printing octal numbers.
+ * @val: the arguments
 *Return: numbers.
 */
 int _oct(va_list val)

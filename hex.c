@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _hex - a function for printing hexadecimal numbers
- * @val: the arguments.
+ * _hex - a function for printing hexadecimal numbers.
+ * @val: the arguments
 *Return: numbers.
 */
 int _hex(va_list val)

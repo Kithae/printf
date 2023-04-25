@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _rot13 - a function for printing rot13 strings
+ * _rot13 - a function for printing rot13 strings.
  * @args: the arguments
-*Return: strings
+*Return: strings.
 */
 int _rot13(va_list args)
 {

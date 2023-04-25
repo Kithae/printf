@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-*_srev - a function for printing reverse strings
+*_srev - a function for printing reverse strings.
 *@args: the arguments
-*Return: string
+*Return: string.
 */
 int _srev(va_list args)
 {

@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _char - a function for printing a character
- * @val: the arguments.
+ * _char - a function for printing a character.
+ * @val: the arguments
 *Return: printed characters.
 */
 int _char(va_list val)

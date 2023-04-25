@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * _string - a function for printing string length
- * @val: the argument.
+ * _string - a function for printing string length.
+ * @val: the argument
 *Return: string length.
 */
 
