@@ -7,23 +7,23 @@
 
 int _string(va_list val)
 {
-char *s;
-int i, len;
+char *a;
+int x, length;
 
-s = va_arg(val, char *);
-if (s == NULL)
+a = va_arg(val, char *);
+if (a == NULL)
 {
-s = "(null)";
-len = _strlen(s);
-for (i = 0; i < len; i++)
-_putchar(s[i]);
-return (len);
+a = "(null)";
+length = _strlen(a);
+for (x = 0; x < length; x++)
+_putchar(a[x]);
+return (length);
 }
 else
 {
-len = _strlen(s);
-for (i = 0; i < len; i++)
-_putchar(s[i]);
-return (len);
+length = _strlen(a);
+for (x = 0; x < length; x++)
+_putchar(a[x]);
+return (length);
 }
 }

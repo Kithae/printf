@@ -6,39 +6,39 @@
 */
 int _unsigned(va_list args)
 {
-unsigned int n = va_arg(args, unsigned int);
-int num, last = n % 10, digit, exp = 1;
-int  i = 1;
+unsigned int y = va_arg(args, unsigned int);
+int number, last = y % 10, digit, exp = 1;
+int x = 1;
 
-n = n / 10;
-num = n;
+y = y / 10;
+number = y;
 
 if (last < 0)
 {
 _putchar('-');
-num = -num;
-n = -n;
+number = -number;
+y = -y;
 last = -last;
-i++;
+x++;
 }
-if (num > 0)
+if (number > 0)
 {
-while (num / 10 != 0)
+while (number / 10 != 0)
 {
 exp = exp * 10;
-num = num / 10;
+number = number / 10;
 }
-num = n;
+number = y;
 while (exp > 0)
 {
-digit = num / exp;
+digit = number / exp;
 _putchar(digit + '0');
-num = num - (digit *exp);
+number = number - (digit *exp);
 exp = exp / 10;
-i++;
+x++;
 }
 }
 _putchar(last + '0');
 
-return (i);
+return (x);
 }

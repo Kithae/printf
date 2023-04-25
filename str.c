@@ -6,11 +6,11 @@
 */
 int _strlen(char *s)
 {
-int c;
+int x;
 
-for (c = 0; s[c] != 0; c++)
+for (x = 0; s[x] != 0; x++)
 ;
-return (c);
+return (x);
 
 }
 /**
@@ -20,9 +20,9 @@ return (c);
 */
 int _strlenc(const char *s)
 {
-int c;
+int x;
 
-for (c = 0; s[c] != 0; c++)
+for (x = 0; s[x] != 0; x++)
 ;
-return (c);
+return (x);
 }

@@ -7,33 +7,33 @@
 
 int _exclusive_string(va_list val)
 {
-char *s;
-int i, len = 0;
-int cast;
+char *strs;
+int x, length = 0;
+int ct;
 
-s = va_arg(val, char *);
-if (s == NULL)
-s = "(null)";
-for (i = 0; s[i] != '\0'; i++)
+strs = va_arg(val, char *);
+if (strs == NULL)
+strs = "(null)";
+for (x = 0; strs[x] != '\0'; x++)
 {
-if (s[i] < 32 || s[i] >= 127)
+if (strs[x] < 32 || strs[x] >= 127)
 {
 _putchar('\\');
 _putchar('x');
-len = len + 2;
-cast = s[i];
-if (cast < 16)
+length = length + 2;
+ct = strs[x];
+if (ct < 16)
 {
 _putchar('0');
-len++;
+length++;
 }
-len = len + _HEX_aux(cast);
+length = length + _HEX_aux(ct);
 }
 else
 {
-_putchar(s[i]);
-len++;
+_putchar(strs[x]);
+length++;
 }
 }
-return (len);
+return (length);
 }

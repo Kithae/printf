@@ -9,14 +9,14 @@ int _srev(va_list args)
 {
 
 char *s = va_arg(args, char*);
-int i;
-int j = 0;
+int x;
+int y = 0;
 
 if (s == NULL)
 s = "(null)";
-while (s[j] != '\0')
-j++;
-for (i = j - 1; i >= 0; i--)
-_putchar(s[i]);
-return (j);
+while (s[y] != '\0')
+y++;
+for (x = y - 1; x >= 0; x--)
+_putchar(s[x]);
+return (y);
 }

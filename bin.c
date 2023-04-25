@@ -7,28 +7,28 @@
 */
 int _bin(va_list val)
 {
-int flag = 0;
-int cont = 0;
-int i, a = 1, b;
+int flgs = 0;
+int count = 0;
+int x, y = 1, z;
 unsigned int num = va_arg(val, unsigned int);
 unsigned int p;
 
-for (i = 0; i < 32; i++)
+for (x = 0; x < 32; x++)
 {
-p = ((a << (31 - i)) & num);
-if (p >> (31 - i))
-flag = 1;
-if (flag)
+p = ((y << (31 - x)) & num);
+if (p >> (31 - x))
+flgs = 1;
+if (flgs)
 {
-b = p >> (31 - i);
-_putchar(b + 48);
-cont++;
+z = p >> (31 - x);
+_putchar(z + 48);
+count++;
 }
 }
-if (cont == 0)
+if (count == 0)
 {
-cont++;
+count++;
 _putchar('0');
 }
-return (cont);
+return (count);
 }

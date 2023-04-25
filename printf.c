@@ -16,29 +16,29 @@ convert_match m[] = {
 };
 
 va_list args;
-int i = 0, j, len = 0;
+int x = 0, y, len = 0;
 
 va_start(args, format);
 if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 return (-1);
 
 Here:
-while (format[i] != '\0')
+while (format[x] != '\0')
 {
-j = 13;
-while (j >= 0)
+y = 13;
+while (y >= 0)
 {
-if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
+if (m[y].id[0] == format[x] && m[y].id[1] == format[x + 1])
 {
-len += m[j].f(args);
-i = i + 2;
+len += m[y].f(args);
+x = x + 2;
 goto Here;
 }
-j--;
+y--;
 }
-_putchar(format[i]);
+_putchar(format[x]);
 len++;
-i++;
+x++;
 }
 va_end(args);
 return (len);

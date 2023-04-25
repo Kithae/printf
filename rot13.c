@@ -6,7 +6,7 @@
 */
 int _rot13(va_list args)
 {
-int i, j, counter = 0;
+int x, y, count = 0;
 int k = 0;
 char *s = va_arg(args, char*);
 char alpha[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
@@ -14,23 +14,23 @@ char beta[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
 
 if (s == NULL)
 s = "(null)";
-for (i = 0; s[i]; i++)
+for (x = 0; s[x]; x++)
 {
 k = 0;
-for (j = 0; alpha[j] && !k; j++)
+for (y = 0; alpha[y] && !k; y++)
 {
-if (s[i] == alpha[j])
+if (s[x] == alpha[y])
 {
-_putchar(beta[j]);
-counter++;
+_putchar(beta[y]);
+count++;
 k = 1;
 }
 }
 if (!k)
 {
-_putchar(s[i]);
-counter++;
+_putchar(s[x]);
+count++;
 }
 }
-return (counter);
+return (count);
 }
